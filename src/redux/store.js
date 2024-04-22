@@ -1,13 +1,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from 'redux-persist'; // Correct import
-import storage from "redux-persist/lib/storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import UniReducer from './wishlist/Uni_wishlist'
 import jobReducer from './wishlist/Job_slice'
 import Scholarship_Reducer from './wishlist/Scholarship_slice';
 
 const persistConfig = {
     key: 'root',
-    storage,
+    storage: AsyncStorage,
 }
 
 const rootReducer = combineReducers({

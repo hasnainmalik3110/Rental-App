@@ -3,6 +3,7 @@ import StackNav from "./src/navigations/stackNav";
 import { Provider } from "react-redux";
 import { Store,persistor } from "./src/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import persistStore from "redux-persist/lib/persistStore";
 
 // let persistor = persistStore(Store);
